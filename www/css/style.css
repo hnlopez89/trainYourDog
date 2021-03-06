@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,100&display=swap");
+@font-face {
+	font-family: "cream";
+	src: url("../font/cream-DEMO.woff");
+}
+html {
+	--primaryColor: #25414f;
+	--secondaryColor: #7dcece;
+	--dark: #202020;
+	--clear: #ffffff;
+	--primaryFont: "Roboto", sans-serif;
+	--secondaryFont: cream, sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: var(--primaryFont);
+	list-style: none;
+}
+
+html {
+	margin: 0 auto;
+}
+
+main,
+header {
+	max-width: 100vh;
+	background-color: var(--secondaryColor);
+	color: var(--primaryColor);
+}
+
+header {
+	background-color: var(--secondaryColor);
+	color: var(--primaryColor);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+div#titles {
+	padding: 1rem 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+div#titles :nth-child(n) {
+	margin: 0.5rem;
+}
+
+div#titles h4,
+div#titles h3 {
+	color: var(--clear);
+}
+
+div#titles h4 {
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+
+div#titles h1 {
+	font-size: 4rem;
+}
+
+div#titles h3 {
+	font-size: 1.5rem;
+	font-weight: 800;
+}
+
+div#titles h2 {
+	text-align: end;
+	font-weight: 100;
+}
+
+div#about {
+	padding: 1rem;
+	width: 30%;
+	min-width: 15rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+div#about div {
+	position: relative;
+	display: inline-block;
+}
+div#about > div img {
+	height: auto;
+	width: 15rem;
+	border-radius: 500px;
+}
+
+div#about > div div {
+	display: none;
+}
+div#about > div:hover div {
+	color: var(--clear);
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	left: 0;
+	display: inline-flex;
+	border-radius: 500px;
+	justify-content: center;
+	align-items: center;
+}
+
+header div ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 1rem;
+	margin-bottom: 0;
+}
+
+header div ul li {
+	margin: 0.5rem;
+}
+
+header div ul li img {
+	width: 3rem;
+}
+div#about ul img:hover {
+	filter: contrast(0%);
+}
+
+#steps > li {
+	height: 17rem;
+	display: flex;
+	align-items: center;
+}
+
+#steps > li h2 {
+	font-size: 2.8rem;
+	justify-content: center;
+	width: 15.5rem;
+	min-width: 15.5rem;
+	padding: 0 3rem;
+	overflow-wrap: break-word;
+}
+
+#steps > li div {
+	padding-right: 5rem;
+}
+
+#steps > li div h4 {
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+}
+
+#steps > li div p {
+	font-weight: 300;
+	line-height: 22px;
+}
+
+#steps > li:nth-child(odd) {
+	background-color: var(--primaryColor);
+	color: var(--secondaryColor);
+}
+
+#steps > li:nth-child(odd) div h4 {
+	color: var(--clear);
+}
+
+#steps > li:nth-child(even) div p {
+	color: var(--clear);
+}
+
+section h1 {
+	margin: 5rem 0 2rem 0;
+	font-size: 3rem;
+	text-align: center;
+}
+
+form {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: initial;
+	margin: 1rem auto;
+}
+
+form p,
+label {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+input,
+select,
+textarea {
+	margin: 0.8rem 0 1.2rem 0;
+	padding: 0.5rem;
+	background-color: lightgrey;
+	border: solid slategray;
+	box-shadow: 10px 10px 10px slategray;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	background-color: slategrey;
+	color: white;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+[type="radio"],
+[type="checkbox"] {
+	box-shadow: inherit;
+}
+
+#gender {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+button {
+	padding: 0.5rem 1rem;
+	margin: 1rem auto;
+	background-color: var(--clear);
+	color: var(--primaryColor);
+	font-weight: 800;
+	border-radius: 20% / 50%;
+	border: 0;
+}
+
+button:hover {
+	background-color: var(--primaryColor);
+	color: var(--clear);
+}
+
+section h1 {
+	margin-top: 3rem;
+}
+
+section > div {
+	padding: 1rem;
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%; /*panorámico*/
+	padding-top: 25px;
+}
+
+section div > iframe {
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	width: 90%;
+	height: 90%;
+}
+
+@media (max-width: 700px) {
+	header {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-items: self-end;
+	}
+
+	header div#titles h1 {
+		font-size: 2rem;
+	}
+
+	header div#titles h3 {
+		font-size: 1.4rem;
+	}
+
+	header div#titles :nth-child(n) {
+		margin: 0.2rem;
+		text-align: center;
+	}
+	header div#titles :last-child {
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		text-align: right;
+	}
+
+	header div ul li {
+		margin: 0.5rem;
+	}
+
+	header div ul li img {
+		width: 3rem;
+	}
+	#steps li {
+		flex-direction: column;
+		height: auto;
+	}
+
+	#steps li > h2 {
+		font-size: 1.6rem;
+		padding: 1rem;
+		width: auto;
+	}
+
+	#steps li div {
+		padding: 1rem 2rem;
+	}
+
+	#steps li div h4 {
+		font-size: 1.4rem;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	section h1 {
+		font-size: 1.8rem;
+	}
+}
